@@ -1,0 +1,572 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD9006DA-B2CF-4542-A692-57E9E1AB7167}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PharmaceyManagament</RootNamespace>
+    <AssemblyName>YouMag</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Untitled-1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgetPassword.Designer.cs">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CurrentUser.cs" />
+    <Compile Include="Helpers\DataBaseHelper.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCustomColors.cs" />
+    <Compile Include="Notes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notes.Designer.cs">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyADataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="pharmacyADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pharmacyADataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registring.Designer.cs">
+      <DependentUpon>Registring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FrmReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\FrmReports.Designer.cs">
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\StoreDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\StoreDetails.Designer.cs">
+      <DependentUpon>StoreDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Depts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Depts.Designer.cs">
+      <DependentUpon>Depts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Drugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Drugs.Designer.cs">
+      <DependentUpon>Drugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndPurchases\SaleBillPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndPurchases\SaleBillPrint.Designer.cs">
+      <DependentUpon>SaleBillPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesAndPurchases\Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sessions.Designer.cs">
+      <DependentUpon>Sessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestLogin.Designer.cs">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ForgetPassword.resx">
+      <DependentUpon>ForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notes.resx">
+      <DependentUpon>Notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registring.resx">
+      <DependentUpon>Registring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPurchasesBill.rdlc" />
+    <EmbeddedResource Include="ReportSaleDebtBill.rdlc" />
+    <EmbeddedResource Include="reportStoredetails.rdlc" />
+    <EmbeddedResource Include="Reports\FrmReports.resx">
+      <DependentUpon>FrmReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StoreDetails.resx">
+      <DependentUpon>StoreDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAndPurchases\Depts.resx">
+      <DependentUpon>Depts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAndPurchases\Drugs.resx">
+      <DependentUpon>Drugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAndPurchases\SaleBillPrint.resx">
+      <DependentUpon>SaleBillPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAndPurchases\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesAndPurchases\Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesReport1.rdlc" />
+    <EmbeddedResource Include="Sessions.resx">
+      <DependentUpon>Sessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestLogin.resx">
+      <DependentUpon>TestLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="pharmacyADataSet.xsc">
+      <DependentUpon>pharmacyADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyADataSet.xss">
+      <DependentUpon>pharmacyADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet1.xsc">
+      <DependentUpon>pharmacyADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyADataSet1.xss">
+      <DependentUpon>pharmacyADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet2.xsc">
+      <DependentUpon>pharmacyADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyADataSet2.xss">
+      <DependentUpon>pharmacyADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet3.xsc">
+      <DependentUpon>pharmacyADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyADataSet3.xss">
+      <DependentUpon>pharmacyADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet4.xsc">
+      <DependentUpon>pharmacyADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="pharmacyADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>pharmacyADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="pharmacyADataSet4.xss">
+      <DependentUpon>pharmacyADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\pharmacyADataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_list_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_reminder_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_apply_skin_type_7_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_approved_unlock_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_backspace_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bank_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_bill_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_calendar_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cancel_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_cash_in_hand_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_check_all_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_checked_checkbox_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_clear_symbol_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_clinic_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_customer_skin_type_7_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_customer_skin_type_7_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_recovery_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_bin_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_user_data_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_doctors_bag_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_eye_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_gdpr_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_good_pincode_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_invisible_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_mark_view_as_hidden_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_medical_bag_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_member_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_member_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_menu_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_minus_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_money_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_notification_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ok_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_password_reset_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pharmacy_shop_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pill_48px_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pill_bottle_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_plus_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_print_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_private_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reminder_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_report_file_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reset_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reset_48px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_rod_of_asclepius_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_as_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_close_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_security_shield_green_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_security_shield_green_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_share_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_show_password_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_supplier_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_syringe_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_task_completed_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_task_completed_48px_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_tick_box_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_to_do_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_unlock_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_manual_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_wrong_pincode_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_denied_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_edit_property_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_unavailable_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pharmacyA.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="pharmacyA_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>pharmacyA.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\IMG_٢٠٢٢١٠٠٦_٢٢٣٦٣١.jpg" />
+    <None Include="Resources\Untitled-1.png" />
+    <Content Include="Untitled-1.ico" />
+    <None Include="Resources\icons8_delete_database_48px.png" />
+    <None Include="Resources\icons8_delete_database_96px.png" />
+    <None Include="Resources\icons8_settings.png" />
+    <None Include="Resources\icons8_refresh_48px_1.png" />
+    <None Include="Resources\icons8_insert_row_48px.png" />
+    <None Include="Resources\icons8_schedule_48px.png" />
+    <None Include="Resources\icons8_goodnotes_48px.png" />
+    <None Include="Resources\icons8_database_restore_48px.png" />
+    <None Include="Resources\icons8_data_backup_48px.png" />
+    <None Include="Resources\icons8_cash_in_hand_48px1.png" />
+    <None Include="Resources\icons8_user_48px.png" />
+    <None Include="Resources\icons8_shutdown_48px.png" />
+    <None Include="Resources\icons8_change_user_48px.png" />
+    <None Include="Resources\icons8_info_48px.png" />
+    <None Include="Resources\icons8_pricing_48px.png" />
+    <None Include="Resources\icons8_receipt_48px1.png" />
+    <None Include="Resources\icons8_debt_48px.png" />
+    <None Include="Resources\icons8_total_sales_48px.png" />
+    <None Include="Resources\icons8_supplier_48px1.png" />
+    <None Include="Resources\icons8_sell_48px_1.png" />
+    <None Include="Resources\icons8_sell_48px1.png" />
+    <None Include="Resources\icons8_sales_performance_48px.png" />
+    <None Include="Resources\icons8_product_48px.png" />
+    <None Include="Resources\icons8_procurement_48px_1.png" />
+    <None Include="Resources\icons8_procurement_48px.png" />
+    <None Include="Resources\icons8_buy_48px.png" />
+    <None Include="Resources\icons8_left_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
